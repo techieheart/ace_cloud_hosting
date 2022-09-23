@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #ee9617;
+  --secondary: #fe5858;
+  --tertiary: #d44800;
+  --dark: #262626;
+  --white: #ffffff;
+}
+
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  transition: 0.3s all;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 15px 50px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.container {
+  width: 160rem;
+  margin: 0 auto;
+}
+
+/* Header Start */
+#header {
+  background-image: url("img/hero-img.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+#header .header__top {
+  background-color: var(--dark);
+  height: 6rem;
+  color: var(--white);
+}
+
+#header .header__top .container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding-top: 1.5rem;
+}
+
+#header .header__top .header__top--left {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+#header .header__top .header__top--left a {
+  color: #ee9617;
+  display: inline-block;
+}
+#header .header__top .header__top--left a::after {
+  background-color: var(--primary);
+}
+
+#header .header__top .header__top--center {
+  margin-left: 15rem;
+}
+
+#header .header__top .header__top--right {
+  color: var(--white);
+}
+
+#header .header__top .header__top--right:hover {
+  color: var(--secondary);
+}
+
+#header .header__top .header__top--right::after {
+  height: 3px;
+  background: var(--secondary);
+  margin: 0 auto;
+}
+
+#header .header {
+  margin-top: 5rem;
+}
+
+#header .header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .header ul.navbar {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+#header .header ul.navbar li.nav-item a.nav-link {
+  font-size: 2rem;
+  color: #fff;
+}
+
+#header .header ul.navbar li.nav-item a.nav-link::after {
+  background-color: var(--white);
+  margin: 0 auto;
+}
+
+#header .header .btn-primary {
+  background-color: var(--tertiary);
+  color: var(--white);
+  border-radius: 50px;
+}
+
+/* Header End */
